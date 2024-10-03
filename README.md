@@ -19,7 +19,7 @@
 Spring Assistant는 자연어 질문을 통해 Spring 공식 문서에서 숨겨진 정보와 지엽적인 기능을 쉽게 찾을 수 있도록 돕는 AI 도우미입니다.
 Spring의 다양한 기능과 설정이 때때로 문서 깊숙이 묻혀 있어 접근하기 어렵지만, 이 모델을 통해 개발자들이 보다 생산적이고 효율적으로 Spring을 활용할 수 있습니다.
 
-## 진행 방식
+## 작업 방식
 
 ### 기본 데이터 준비
 
@@ -28,7 +28,7 @@ Spring 생태계의 주요
 
 - 주요
   프로젝트: [Spring Boot](https://spring.io/projects/spring-boot), [Spring Framework](https://spring.io/projects/spring-framework), [Spring Data](https://spring.io/projects/spring-data), [Spring Cloud](https://spring.io/projects/spring-cloud), ..
-- Q) 왜 Spring 생태계의 다양한 프로젝트 문서를 수집해야 하나요?
+- 왜 Spring 생태계의 다양한 프로젝트 문서를 수집해야 하나요?
     - Spring 생태계는 다양한 프로젝트로 구성되어 있어, 각 프로젝트의 문서를 포함함으로써 더 포괄적이고 정확한 정보를 제공할 수 있습니다.
       프로젝트 간의 연관성과 통합 방법에 대한 정보도 포함할 수 있어, 사용자에게 더 유용한 답변을 제공할 수 있습니다.
 
@@ -41,7 +41,7 @@ Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-starte
 ![QA_DATASET_SAMPLE.png](assets/qa_dataset_sample.png)
 
 - Dataset: https://huggingface.co/datasets/bky373/spring-docs
-- Q) Q&A 데이터셋으로 변환하는 것이 왜 유용한가요?
+- Q&A 데이터셋으로 변환하는 것이 왜 유용한가요?
     - Q&A 형식은 사용자의 실제 질문 패턴과 유사하여, 모델이 더 자연스럽고 정확한 응답을 생성하는 데 도움이 됩니다.
       이 형식은 모델이 질문의 맥락을 이해하고 관련 정보를 추출하는 능력을 향상시킵니다.
 
@@ -50,7 +50,7 @@ Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-starte
 사전 훈련된 `Gemma2-2b-it` 모델을 기반으로 QLoRA 방식을 사용하여 모델 파인튜닝을 진행하였습니다.
 
 - 파인튜닝 모델: https://huggingface.co/datasets/bky373/spring-docs (변경 필요)
-- Q) 왜 QLoRA 방식으로 파인튜닝을 진행하나요?
+- 왜 QLoRA 방식으로 파인튜닝을 진행하나요?
     - QLoRA(Quantized Low-Rank Adaptation)는 적은 컴퓨팅 자원으로도 효과적인 파인튜닝이 가능한 기법입니다.
       모델의 대부분의 가중치를 고정하고 일부만 조정하여, 과적합 위험을 줄이면서도 특정 도메인에 대한 성능을 향상시킬 수 있습니다.
 
@@ -111,4 +111,3 @@ Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-starte
   - All Spring Projects: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Copyright © 2024 Broadcom. All Rights Reserved.
   - Gemma 2 Model: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Copyright 2024 Google LLC.
   - Hugging Face Transformers: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
-- 이 프로젝트의 코드는 [MIT License](https://opensource.org/license/MIT) 하에 배포됩니다. 단, 위에 명시된 컴포넌트들은 각각의 라이선스를 따릅니다.
