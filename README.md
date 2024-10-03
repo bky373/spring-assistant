@@ -24,7 +24,7 @@ Spring의 다양한 기능과 설정이 때때로 문서 깊숙이 묻혀 있어
 ### 기본 데이터 준비
 
 Spring 생태계의 주요
-프로젝트들을 포함한 대부분의 프로젝트 공식 문서 수집하였습니다. 접근 가능한 웹페이지 수를 기준으로 약 {} 장의 문서를 수집하였습니다.
+프로젝트들을 포함한 대부분의 프로젝트 공식 문서 수집하였습니다. 접근 가능한 웹페이지 수를 기준으로 2489 장의 문서를 수집하였습니다.
 
 - 주요
   프로젝트: [Spring Boot](https://spring.io/projects/spring-boot), [Spring Framework](https://spring.io/projects/spring-framework), [Spring Data](https://spring.io/projects/spring-data), [Spring Cloud](https://spring.io/projects/spring-cloud), ..
@@ -34,11 +34,13 @@ Spring 생태계의 주요
 
 ### QA 데이터셋 생성
 
-수집된 공식 문서 데이터를 Q&A 형식의 데이터셋으로 변환(생성)합니다. 데이터셋 생성은
-Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-started/models) 모델을 기반으로 수행되었으며,
-결과적으로 `6205` 쌍의 QA 데이터셋을 만들었습니다.
+수집된 공식 문서 데이터를 Q&A 형식의 데이터셋으로 변환합니다. 데이터셋은
+Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-started/models) 모델을 사용하여 생성하였으며,
+결과적으로 6205 쌍의 QA 데이터셋을 만들었습니다.
 
-- Dataset: https://huggingface.co/datasets/bky373/spring-docs/tree/main
+![QA_DATASET_SAMPLE.png](assets/qa_dataset_sample.png)
+
+- Dataset: https://huggingface.co/datasets/bky373/spring-docs
 - Q) Q&A 데이터셋으로 변환하는 것이 왜 유용한가요?
     - Q&A 형식은 사용자의 실제 질문 패턴과 유사하여, 모델이 더 자연스럽고 정확한 응답을 생성하는 데 도움이 됩니다.
       이 형식은 모델이 질문의 맥락을 이해하고 관련 정보를 추출하는 능력을 향상시킵니다.
@@ -54,7 +56,7 @@ Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-starte
 
 ### 평가
 
-파인튜닝된 모델의 성능 변화를 확인합니다.
+파인 튜닝된 모델의 성능 변화를 확인합니다.
 
 - (보류) 모델의 성능을 어떻게 평가할 수 있나요?
   테스트 데이터셋을 사용한 정량적 평가: 정확도, F1 점수, BLEU 점수 등의 메트릭을 활용
@@ -68,10 +70,10 @@ Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-starte
 
 ## 기대 효과
 
-- Spring 개발자들이 자연어로 쉽게 정보를 검색하고 활용할 수 있는 환경을 만드는 것에 기여합니다.
+- Spring 개발자들이 자연어로 쉽게 정보를 검색하고 활용할 수 있는 환경을 만듭니다.
 - 숨겨진 기능이나 지엽적인 설정 정보에도 쉽게 접근 가능합니다.
-- 개발 생산성 및 코드 품질 향상에 기여합니다.
 - Spring의 모범 사례 빠르게 학습하고 적용할 수 있도록 합니다.
+- 개발 생산성 및 코드 품질 향상에 기여합니다.
 
 ## Sources
 
@@ -106,7 +108,7 @@ Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-starte
 ## License
 
 - 이 프로젝트는 다음의 오픈 소스 라이선스를 따릅니다:
-  - Spring Framework: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Copyright © 2024 Broadcom. All Rights Reserved.
+  - All Spring Projects: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Copyright © 2024 Broadcom. All Rights Reserved.
   - Gemma 2 Model: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0). Copyright 2024 Google LLC.
   - Hugging Face Transformers: [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 - 이 프로젝트의 코드는 [MIT License](https://opensource.org/license/MIT) 하에 배포됩니다. 단, 위에 명시된 컴포넌트들은 각각의 라이선스를 따릅니다.
