@@ -23,8 +23,7 @@ Spring의 다양한 기능과 설정이 때때로 문서 깊숙이 묻혀 있어
 
 ### 기본 데이터 준비
 
-Spring 생태계의 주요
-프로젝트들을 포함한 대부분의 프로젝트 공식 문서 수집하였습니다. 접근 가능한 웹페이지 수를 기준으로 2489 장의 문서를 수집하였습니다.
+Spring 생태계의 주요 프로젝트들을 포함한 대부분의 프로젝트 공식 문서 수집하였습니다. 접근 가능한 웹 페이지 수를 기준으로 2489 장의 문서를 수집하였습니다.
 
 - 주요
   프로젝트: [Spring Boot](https://spring.io/projects/spring-boot), [Spring Framework](https://spring.io/projects/spring-framework), [Spring Data](https://spring.io/projects/spring-data), [Spring Cloud](https://spring.io/projects/spring-cloud), ..
@@ -34,9 +33,9 @@ Spring 생태계의 주요
 
 ### QA 데이터셋 생성
 
-수집된 공식 문서 데이터를 Q&A 형식의 데이터셋으로 변환합니다. 데이터셋은
-Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-started/models) 모델을 사용하여 생성하였으며,
-결과적으로 6205 쌍의 QA 데이터셋을 만들었습니다.
+수집된 공식 문서 내용을 Q&A 형식의 데이터셋으로 변환합니다. 데이터셋은
+Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-started/models) 모델(`버전: solar-1-mini-chat-240612`)을 사용하여 생성하였습니다.
+결과적으로 아래 예시와 같이 6205 쌍의 QA 데이터셋을 만들었습니다.
 
 ![QA_DATASET_SAMPLE.png](assets/qa_dataset_sample.png)
 
@@ -71,7 +70,7 @@ Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-starte
 ## 기대 효과
 
 - Spring 개발자들이 자연어로 쉽게 정보를 검색하고 활용할 수 있는 환경을 만듭니다.
-- 숨겨진 기능이나 지엽적인 설정 정보에도 쉽게 접근 가능합니다.
+- 숨겨진 기능이나 지엽적인 설정 정보에도 쉽게 접근 가능하게 합니다.
 - Spring의 모범 사례 빠르게 학습하고 적용할 수 있도록 합니다.
 - 개발 생산성 및 코드 품질 향상에 기여합니다.
 
