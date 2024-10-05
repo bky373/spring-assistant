@@ -47,7 +47,7 @@ Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-starte
 
 사전 훈련된 `Gemma2-2b-it` 모델을 기반으로 QLoRA 방식을 사용하여 모델 파인튜닝을 진행하였습니다.
 
-- 파인튜닝 모델: https://huggingface.co/datasets/bky373/spring-docs (변경 필요)
+- 파인튜닝 모델: https://huggingface.co/bky373/spring-assistant
 - 왜 QLoRA 방식으로 파인튜닝을 진행하나요?
     - QLoRA(Quantized Low-Rank Adaptation)는 적은 컴퓨팅 자원으로도 효과적인 파인튜닝이 가능한 기법입니다.
       모델의 대부분의 가중치를 고정하고 일부만 조정하여, 과적합 위험을 줄이면서도 특정 도메인에 대한 성능을 향상시킬 수 있습니다.
@@ -64,6 +64,14 @@ Upstage의 [solar-1-mini-chat](https://developers.upstage.ai/docs/getting-starte
 - 숨겨진 기능이나 지엽적인 설정 정보에도 쉽게 접근 가능하게 합니다.
 - Spring의 모범 사례 빠르게 학습하고 적용할 수 있도록 합니다.
 - 개발 생산성 및 코드 품질 향상에 기여합니다.
+
+## 개선할 점
+
+- Q&A 데이터셋 생성시 프롬프트 작성이 미흡
+	- 기술 용어를 한국어로 번역해서 사용한 문제
+		- 예) "스프링 데이터 리포지토리에서 쿼리를 표현하는 데 사용되는 일반적 쿼리 메소드 주어 키워드는 무엇인가요?","찾아보세요...By, 읽어보세요...By, 가져보세요...By, 쿼리하세요...By, 검색하세요...By, 스트리밍하세요...By는 일반적으로 리포지토리 타입, 컬렉션 또는 스트림 가능한 하위 타입 또는 Page, GeoResults 또는 기타 저장소별 결과 래퍼와 같은 결과 래퍼를 반환하는 일반적인 쿼리 메소드입니다. findBy... , findMyDomainTypeBy... 또는 추가 키워드와 함께 사용할 수 있습니다. (출처: [https://docs.spring.io/spring-data/ldap/reference/3.3/repositories/query-keywords-reference.html](https://docs.spring.io/spring-data/ldap/reference/3.3/repositories/query-keywords-reference.html))"
+		- 찾아보세요 -> find, 쿼리하세요 -> query 등으로 그대로 사용할 필요가 있음..
+- AI 응답에서 중복 내용이 많다는 점 
 
 ## Sources
 
